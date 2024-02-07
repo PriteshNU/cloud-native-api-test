@@ -1,9 +1,14 @@
 HELP.md
+.DS_Store
 target/
-!.mvn/wrapper/maven-wrapper.jar
+build-target
+.mvn/wrapper/*.jar
+.mvn/maven.config
 !**/src/main/**/target/
 !**/src/test/**/target/
-**/.DS_Store
+**/dependency-reduced-pom.xml
+*.class
+*.war
 
 ### STS ###
 .apt_generated
@@ -19,6 +24,7 @@ target/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,3 +38,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+logs/
+*.log
