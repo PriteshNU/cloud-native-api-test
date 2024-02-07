@@ -3,11 +3,11 @@ spring:
     banner-mode: off
   datasource:
     url: jdbc:postgresql://localhost:5432/cloud_db
-    username: devops_admin
-    password: DevOps@670951
+    username: ${{ secrets.DB_USERNAME }}
+    password: ${{ secrets.DB_PASSWORD }}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: false
     properties:
       hibernate:
@@ -16,11 +16,6 @@ spring:
           use_jdbc_metadata_defaults: false
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-  security:
-    user:
-      name: admin
-      password: admin
 
 springdoc:
   api-docs:
